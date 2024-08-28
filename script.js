@@ -19,7 +19,7 @@ const btnDesencriptar=()=>{
     const textoEncriptado = desencriptar(textArea.value);
     encrypterResult.innerHTML = textoEncriptado;
     toogleEncrypterResult(true)
-}
+}   
 
 const encriptar = (value) =>{
     let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
