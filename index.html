@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <section class="encrypter">
+        <header>
+            <img class="logo" src="images/logo.png" alt="logo">
+        </header>
+        <div class="text-area">
+            <textarea class="inputText" placeholder="Ingrese el texto aqui"></textarea>
+        </div>
+        <div class="botones">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="#3b3b3b" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m1 6a1 1 0 1 0-2 0v6a1 1 0 1 0 2 0zm0 9.5a1 1 0 1 0-2 0v.5a1 1 0 1 0 2 0z" clip-rule="evenodd"/></svg>
+                <p>Solo letras minusc&uacutelas y sin acentos</p>
+            </div>
+            <div>
+                <button onclick="btnEncriptar()">Encriptar</button>
+                <button onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </div>
+    </section>
+    <section class="encrypter-result">
+        <span class="result">
+            <img id="img-result" class="imgEncryptResult" src="images/WhatsApp Image 2024-08-26 at 21.09.39.jpeg" alt=""> 
+            <h1 id="title-result">Ningún mensaje fue encontrado</h1>
+            <p id="p-result" class="outputText">Ingresa el texto que desees encriptar o desencriptar</p>
+        </span>
+        <button id="btnCopiar" class="button-copy" onclick="copiar()">Copiar</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

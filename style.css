@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: rgb(214, 233, 235);
+    height: 100vh;
+    padding: 40px 80px;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    grid-template-areas: "encrypter encrypter-result";
+}
+button {
+    padding: 20px 0;
+    width: 22vw;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.encrypter{
+    grid-area: "encrypter";
+}
+.logo{
+    width: 50px;
+}
+.text-area{
+    margin-top: 1rem;
+}
+.text-area textarea{
+    width: 85%;
+    height: 65vh;
+    border: none;
+    background: rgb(214, 233, 235);
+    resize: none;
+    font-weight: 400;
+    color: rgb(31, 29, 136);
+    font-size: xx-large;
+    margin-left: 10%;
+}
+.encrypter textarea:focus {
+    outline: none;
+}
+.botones{
+    margin-left: 10%;
+}
+.encrypter .botones div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+.botones div:nth-child(2) {
+    margin-top: 1rem;
+    display: flex;
+}
+.botones button:first-child {
+    background-color: #0a3871;
+    color: white;
+    margin-right: 1.5rem;
+}
+
+.botones button:nth-child(2) {
+    color: #0a3871;
+    border: 1px solid #0a3871;
+}
+.encrypter-result{
+    grid-area: "encrypter-result";
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 30px rgb(155, 155, 155);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+.encrypter-result .result{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-wrap: anywhere;
+    height: 80%;
+}
+
+.imgEncryptResult{
+    display: initial;
+}
+.imgHidden{
+    display: none;
+}
+.button-copy{
+    display: none;
+}
+.outputText{
+    padding: 1rem;
+}
+@media screen and (max-width: 1439px) {
+    body{
+        height: initial;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "encrypter"
+        "encrypter-result";
+    }
+    button{
+        width: 100%;
+    }
+    .text-area textarea,.botones{
+        margin-left: initial;
+    }
+    .encrypter-result{
+        margin-top: 2rem;
+        gap: initial;
+    }
+    .encrypter-result>*{
+        margin: 1rem 0 2rem;
+        padding: 0 1rem;
+    }
+    .encrypter-result button{
+        width: 90%;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+    }
+    .imgEncryptResult{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 767px) {
+    .botones div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+    }
+    .botones button{
+        margin-bottom: 1rem;
+    }
+}
