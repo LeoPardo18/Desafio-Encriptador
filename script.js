@@ -17,7 +17,7 @@ const btnDesencriptar=()=>{
         return
     }
     const textoEncriptado = desencriptar(textArea.value);
-    mensaje.innerHTML = textoEncriptado;
+    encrypterResult.innerHTML = textoEncriptado;
     toogleEncrypterResult(true)
 }
 
